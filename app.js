@@ -8,7 +8,7 @@ require("./config/db.js")
 const port = process.env.PORT
 const app = express()
 
-app.use(cors({credentials: true, origin: "http://front-react-gram.vercel.app"}))
+app.use(cors({credentials: true, origin: "https://front-react-gram.vercel.app"}))
 
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")))
 
