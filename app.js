@@ -11,9 +11,11 @@ const app = express()
 app.use(cors({credentials: true, origin: "http://localhost:5173"}))
 
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")))
+
 app.use(express.json())
+
 app.use(express.urlencoded({extended:false}))
-app.use(router) //SSzw9V1GyHhjGt8D
+app.use(router) 
 app.listen(port, () =>{
     console.log("ta rodando ai")
 })
