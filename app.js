@@ -9,7 +9,7 @@ const port = process.env.PORT
 const app = express()
 
 app.use(cors({
-    origin: ['https://front-react-gram.vercel.app', 'https://front-react-gram-jaco1030d.vercel.app'],
+    origin: 'https://front-react-gram.vercel.app',
     credentials: true
   }));
 

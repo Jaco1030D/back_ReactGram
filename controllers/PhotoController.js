@@ -42,7 +42,6 @@ const deletePhotos = async (req, res) =>{
         res.status(200).json({ id: photo._id, message: "Foto excluída com sucesso." });
     } catch (error) {
         res.status(404).json({ errors: ["foto não encontrada"] });
-        console.log(error)
     }
 }
 const getAllPhotos = async (req, res) =>{

@@ -39,7 +39,7 @@ const register = async(req, res) =>{
         res.status(422).json({errors: ["Houve um erro em nossos servidores, tente mais tarde"]})
         return
     }
-    res.status(201).json({
+    res.status(200).json({
         _id: newUser._id,
         token: generateToken(newUser._id)
     })
