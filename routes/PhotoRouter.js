@@ -7,7 +7,7 @@ const validate = require("../middlewares/handleValidator")
 const { imageUpload } = require("../middlewares/imageUploads")
 const { photoInsertValidation, photoUpdateValidation, commentValidation } = require("../middlewares/photoValidation")
 
-router.post("/", authGuard, imageUpload.single("image"), photoInsertValidation(), validate, insertPhoto)
+router.post("/", authGuard, photoInsertValidation(), validate, insertPhoto)
 router.delete("/:id", authGuard, deletePhotos)
 router.get("/", authGuard, getAllPhotos)
 router.get("/users/:id", authGuard, getUserPhotos)

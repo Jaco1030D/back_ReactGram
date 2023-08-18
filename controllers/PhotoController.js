@@ -3,8 +3,7 @@ const Photo = require("../models/Photo");
 const User = require("../models/User");
 
 const insertPhoto = async (req, res) =>{
-    const {title} = req.body
-    const image = req.file.filename
+    const {title, image} = req.body
 
     const reqUser = req.user
 
@@ -14,7 +13,7 @@ const insertPhoto = async (req, res) =>{
         image,
         title,
         userId: user._id,
-        userName: user.name
+        userName: user.name,
     })
 
     if (!newPhoto) {

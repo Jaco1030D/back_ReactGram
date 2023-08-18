@@ -65,12 +65,12 @@ const login = async(req,res) =>{
 
 }
 const update = async (req, res) =>{
-    const {name, password, bio} = req.body
+    const {name, password, bio, profileImage} = req.body
 
-    let profileImage = null
+    let profile = null
 
-    if (req.file) {
-        profileImage = req.file.filename
+    if (profileImage) {
+        profile = profileImage
     }
 
     const reqUser = req.user
@@ -85,7 +85,7 @@ const update = async (req, res) =>{
         user.password = password
     }
 
-    if (profileImage) {
+    if (profile) {
         user.profileImage = profileImage;
       }
     
